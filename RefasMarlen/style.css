@@ -1,0 +1,225 @@
+:root {
+    --color_primario: #dfae6e;
+    --color_primario_suave:#dfae6e;
+    --color_blanco: #0a0a0ae5;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  rgb(243, 235, 235);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+}
+.header {
+    height: var(--altura_header);
+    background-color: var(--color_primario);
+}
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+}
+.menu_hamburguesa{
+    display: none;
+}
+.menu_hamburguesa:checked + .ul_links {
+    height: calc(100vh - var(--altura_header));
+}
+.logo {
+    height: 70px;
+    width: 75x;
+    border-radius: 10px;
+}
+.labe_hamburguesa {
+}
+.list_icon {
+    color: var(--color_blanco);
+    cursor: pointer;
+}
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario_suave);
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    /* height: calc(100vh - var(--altura_header)); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    transition: all .3s;
+}
+.li_links {
+}
+.link {
+    font-size: 3em;
+    color: var(--color_blanco);
+    font-weight: bold;
+}
+
+@media (min-width:768px){
+    .labe_hamburguesa {
+        display: none;
+    }
+    .ul_links{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .link{
+        font-size: 1.2rem;
+        transition: all .3s;
+        padding: .2rem .7rem;
+    }
+    .link:hover{
+        background-color: #5f1192;
+    }
+}
+.Inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 70vh;
+    color:#a9dae2;
+    font-size: 4vw;
+    font-family: monospace;
+    background-image:url(imagenes/Inicio.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.titulo{
+    background-color: #a18c714b;
+}
+.seccion1{
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    font-size: 4vw;
+    font-family: sans-serif;
+    background-color: rgb(243, 235, 235); 
+}
+.fa-solid{
+    color:#dfae6e ;
+}
+.parrafo{
+    padding: 1vh;
+    font-size: 3vh;
+    font-family:monospace;
+}
+.seccion2{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 70vh;
+    color:#b37423;
+    font-size: 4vw;
+    font-family: sans-serif;
+    background-color:  rgb(243, 235, 235);
+}
+.titulo1{
+    font-size: 4    vh
+    
+}
+.gallery-container {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+  }
+  
+  .gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(8, 8, 8, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  .seccion3{
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    font-size: 4vw;
+    font-family: sans-serif;
+    background-color: rgb(243, 235, 235); 
+}
+.imagenesmenu{
+ height: 100px;
+ width: 120px;
+ border-radius: 50px;
+border: solid; 
+  
+}
+.card-container{
+    padding: 2rem;
+}
+.seccion4{
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 40vh;
+    color: rgb(65, 32, 32);
+    font-size: 4vw;
+    font-family: sans-serif;
+    background-color:  rgb(243, 235, 235); 
+}
+.iconos{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
+.secion4{
+    height: 10px;
+    color: rgb(65, 32, 32);
+}
